@@ -1,0 +1,73 @@
+nav p{
+	display: inline;
+}
+nav {
+	background-color: #445c6d	;
+	/*height: 100px;*/
+}
+.header {
+	height: 100px;
+}
+
+img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*margin-top: -10px;*/
+}
+
+.container {
+	background-image: url("../images/img.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #e3f2f4;
+	height: 400px;
+	padding-top: 100px;
+	margin-top: -10px;
+	font-family: Optima;
+	font-size: 38px;
+}
+.text {
+}
+p {
+	font-size: 30px;
+	padding: 20px;
+	/*text-align: center;*/
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+button {
+	width: 200px;
+	height: 70px;
+	background-color: #b85757;
+	font-size: 20px;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Optima;
+}
+
+.home {
+	font-size: 18px;
+	font-family: Optima;
+	/*color: #fff;*/
+	background-color: #8bb3b4;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.savedArt {
+	font-size: 18px;
+	font-family: Optima;
+	/*color: #fff;*/
+}
+
+.name {
+	color: #fff;
+	font-family: Optima;
+	letter-spacing: 0.05em;
+}
