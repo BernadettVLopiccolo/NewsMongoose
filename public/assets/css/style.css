@@ -2,8 +2,7 @@ nav p{
 	display: inline;
 }
 nav {
-	background-color: #445c6d	;
-	/*height: 100px;*/
+	background-color: #879eb0;
 }
 .header {
 	height: 100px;
@@ -19,20 +18,26 @@ img {
 	background-image: url("../images/img.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
-	color: #e3f2f4;
-	height: 400px;
-	padding-top: 100px;
+	color: #fff;
+	height: 500px;
+	padding-top: 150px;
 	margin-top: -10px;
 	font-family: Optima;
-	font-size: 38px;
 }
-.text {
+h1 {
+	font-size: 58px;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 35px;
+	letter-spacing: 0.05em;
+	text-align: center;
 }
 p {
 	font-size: 30px;
 	padding: 20px;
-	/*text-align: center;*/
 }
 
 a {
@@ -54,16 +59,14 @@ button {
 .home {
 	font-size: 18px;
 	font-family: Optima;
-	/*color: #fff;*/
-	background-color: #8bb3b4;
+	background-color: #b85757;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
 
 .savedArt {
-	font-size: 18px;
+	font-size: 22px;
 	font-family: Optima;
-	/*color: #fff;*/
 }
 
 .name {
