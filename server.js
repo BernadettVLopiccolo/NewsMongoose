@@ -7,7 +7,7 @@ var request = require("request");
 var cheerio  = require("cheerio");
 // var mongodb = require("mongodb");
 var app = express();
-var databaseUrl = "news";
+var databaseUrl = "newsDB";
 var collections = ["articles"];
 
 var db = mongojs(databaseUrl, collections);
@@ -24,37 +24,33 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-// app.get("/all", function(req, res) {
-//   db.articles.find({}, function(error, found) {
-//     if (error) {
-//       console.log(error);
-//     }
-//     else {
-//       res.json(found);
-//     }
-//   });
-// });
+app.get("/scrape", function(req, res) {
+    // Make a request for the news section of sfchronicle
+    request("http://www.sfchronicle.com/", function(error, response, html) {
+        // Load the html body from request into cheerio
+        var $ = cheerio.load(html);
+        var results = [];
+        // For each element with a "title" class
+        $("h2.headline").each(function(i, element) {
+            // Save the text and href of each link enclosed in the current element
+            var title = $(element).find('a').text();
+            var link = $(element).find("a").attr("href");
+            console.log(title, link);
+            results.push({
+              link: link,
+              title: title
+            });
+            db.articles.insert({
+              title: title,
+              link: link
+            });
 
-// app.get("/scrape", function(req, res) {
-//   // Make a request for the news section of ycombinator
-//   request("https://sfchronicle.com/", function(error, response, html) {
-//     // Load the html body from request into cheerio
-//     var $ = cheerio.load(html);
-//     var results = [];
-//     // For each element with a "title" class
-//     $("h2.headline").each(function(i, element) {
-//       // Save the text and href of each link enclosed in the current element
-//       var title = $(element).children().text();
-//       var link = $(element).children("a").attr("href");
-//      results.push({
-//       title: title,
-//       link: link
-//      });
-//    });
+        });
+        // res.send(results);
+        res.json(results);
+    });
+});
 
-// console.log(results);
-// });
-// });
 
 // Listen on port 3000
 app.listen(3000, function() {

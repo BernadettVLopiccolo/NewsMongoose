@@ -1,4 +1,4 @@
-nav p{
+nav li{
 	display: inline;
 }
 nav {
@@ -30,26 +30,60 @@ h1 {
 	text-align: center;
 }
 
-h3 {
-	font-size: 35px;
+h2 {
+	font-size: 30px;
 	letter-spacing: 0.05em;
 	text-align: center;
 }
-p {
+
+h3 {
+	font-size: 25px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	background-color: #879eb0;
+	padding: 20px;
+	margin-top: -20px;
+}
+
+.latestArticles {
+
+}
+li {
 	font-size: 30px;
 	padding: 20px;
 }
-
+p {
+	font-size: 18px;
+	font-family: Optima;
+}
 a {
 	text-decoration: none;
 	color: #fff;
 }
 
+.modal-body {
+	text-align: center;
+}
+
+.btn.btn-default {
+	width: 100px;
+	background-color: #879eb0;
+	color: #fff;
+}
+
+.close {
+	text-align: right;
+	margin-right: 15px;
+}
+
+.btn.scrape {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
 button {
 	width: 200px;
 	height: 70px;
 	background-color: #b85757;
-	font-size: 20px;
 	color: #fff;
 	margin-top: 10px;
 	margin-bottom: 10px;
