@@ -35,10 +35,14 @@
    <h2>SF Chronicle Edition</h2>
    </div>
 </div>
-<div class="latestArticles">
+<!-- <div class="latestArticles">
    <h3>Uh Oh. Looks like we don't have any new articles!</h3>
-</div>
+</div> -->
+
+<!-- Scraped Articles  -->
    <div class="newNews">
+   <p id="articles"></p>
+   <div id="link"></div>
 
     <table>
         <tbody>
@@ -50,7 +54,7 @@
                     <a href="{{this.link}}" class="collection-item blue-text" target="_blank">{{this.title}}</a>
                 </div>
                 <div class="col-md-4">
-                    <button class="noteButton waves-effect waves-light btn-flat blue" id="{{this._id}}">Save Article</button>
+                    <button class="ssaveButton waves-effect waves-light btn-flat blue" id="{{this._id}}">Save Article</button>
                 </div>
 
             </div>
@@ -59,7 +63,9 @@
         </tbody>
     </table>
   </div>
-    <!-- <div id="noteModal" class="modal modal-fixed-footer">
+
+  <!-- Comment Modal -->
+    <div id="noteModal" class="modal modal-fixed-footer">
 
     <div class="modal-content">
         <p>Notes</p>
@@ -75,7 +81,7 @@
         </form>
     </div>
 
-</div> -->
+</div>
 
 <!-- </div> -->
 </body>
