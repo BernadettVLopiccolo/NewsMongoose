@@ -1,88 +1,57 @@
 <body>
-<div class="header">
-	<nav>
-	<ul>
-	    <li class="name">NewsMongoose</li>
-		<li class="home"><a href="#">Home</a></li>
-		<li class="savedArt"><a href="">Saved Articles</a></li>
-		<li class="scrapeNew"><button type="button" class="btn scrape" data-toggle="modal" data-target="#myModal">Scrape New Articles!</button></li>
-		</ul>
-		 <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <!-- <h4 class="modal-title">Modal Header</h4> -->
-        </div>
-        <div class="modal-body">
-          <p>Added New Articles!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+  <div class="header">
+    <nav>
+      <ul>
+        <li class="name">NewsMongoose</li>
+        <li class="home"><a href="#">Home</a>
+        </li>
+        <li class="savedArt"><a href="">Saved Articles</a>
+        </li>
+        <li class="scrapeNew">
+          <button type="button" class="btn scrape" data-toggle="modal" data-target="#myModal">Scrape New Articles!</button>
+        </li>
+      </ul>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <!-- <h4 class="modal-title">Modal Header</h4> -->
+            </div>
+            <div class="modal-body">
+              <p>Added New Articles!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+          </div>
         </div>
       </div>
-
+    </nav>
+  </div>
+  <div class="container">
+    <div>
+      <h1>NewsMongoose</h1>
+      <h2>SF Chronicle Edition</h2>
     </div>
   </div>
-
-	</nav>
-</div>
-<div class="container">
-   <div>
-   <h1>NewsMongoose</h1>
-   <h2>SF Chronicle Edition</h2>
-   </div>
-</div>
-<!-- <div class="latestArticles">
-   <h3>Uh Oh. Looks like we don't have any new articles!</h3>
-</div> -->
-
-<!-- Scraped Articles  -->
-   <div class="newNews">
-   <p id="articles"></p>
-   <div id="link"></div>
-
-    <table>
-        <tbody>
-
-            {{#each articles}}
-            <div class=row>
-
-                <div class="col-md-8">
-                    <a href="{{this.link}}" class="collection-item blue-text" target="_blank">{{this.title}}</a>
-                </div>
-                <div class="col-md-4">
-                    <button class="ssaveButton waves-effect waves-light btn-flat blue" id="{{this._id}}">Save Article</button>
-                </div>
-
-            </div>
-            {{/each}}
-
-        </tbody>
-    </table>
+  <!-- Scraped Articles  -->
+  <div class="newNews">
+    <p id="savedArticles"></p>
+    <p id="articles"></p>
   </div>
-
   <!-- Comment Modal -->
-    <div id="noteModal" class="modal modal-fixed-footer">
-
+  <div id="noteModal" class="modal modal-fixed-footer">
     <div class="modal-content">
-        <p>Notes</p>
-        <ul class="messages collection"></ul>
+      <p>Comments</p>
+      <ul class="messages collection"></ul>
     </div>
     <div class="modal-footer">
-        <form name="noteForm" id="noteForm">
-                    <input required placeholder="Enter a note here" type="text" name="noteText" id="noteText">
-            <button class="btn green left" type="submit" id="noteButton">
-                Post Note!
-            </button>
-            <a href="/" class="modal-action modal-close waves-effect waves-light btn-flat">Close</a>
-        </form>
+      <form name="noteForm" id="noteForm">
+        <input required placeholder="Enter a note here" type="text" name="noteText" id="noteText">
+        <button class="btn green left" type="submit" id="noteButton">Post Comment!</button> <a href="/" class="modal-action modal-close waves-effect waves-light btn-flat">Close</a>
+      </form>
     </div>
-
-</div>
-
-<!-- </div> -->
+  </div>
 </body>
-
